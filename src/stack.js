@@ -13,19 +13,26 @@ const { NotImplementedError } = require('../lib');
  *
  */
 class Stack {
-  push(/* value */) {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+  constructor() {
+    this.stackArr = [];
   }
 
+  // добавляет элемент в стек
+  push(value) {
+    this.stackArr.push(value);
+    return this;
+  }
+
+  // возвращает верхний элемент из стека и удаляет его
   pop() {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    const lastElementRemove = this.stackArr.pop();
+    return lastElementRemove;
   }
 
+  // возвращает просмотр, но не удаляет его
   peek() {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    const lastElement = this.stackArr.slice(-1)[0];
+    return lastElement;
   }
 }
 
